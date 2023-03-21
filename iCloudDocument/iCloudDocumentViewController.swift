@@ -15,6 +15,7 @@ class iCloudDocumentViewController: UIViewController {
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var loadButton: UIButton!
     
+    // 取得iCloudContainer
     let containerURL = FileManager.default.url(forUbiquityContainerIdentifier: nil)
     
     var documentURL: URL?
@@ -29,6 +30,7 @@ class iCloudDocumentViewController: UIViewController {
         setupTextView()
     }
     
+    // 在iCloud產生文件
     private func setupiCloudDocument() {
         documentURL = containerURL?.appendingPathComponent("Documents/test.txt")
     }
@@ -38,9 +40,12 @@ class iCloudDocumentViewController: UIViewController {
         documentTextView.returnKeyType = .done
     }
     
+    // 儲存內容上iCloud
     @IBAction func saveDocument(_ sender: Any) {
         if let url = documentURL {
             do {
+                
+                // 將TextView裡的內容寫入文件
                 try documentTextView.text.write(to: url,
                                                 atomically: true,
                                                 encoding: .utf8)
@@ -51,11 +56,18 @@ class iCloudDocumentViewController: UIViewController {
         }
     }
     
+    // 讀取iCloud裡的文件
     @IBAction func loadDocument(_ sender: Any) {
         if let documentPath = documentURL?.path {
             print(documentPath)
+            
+            // 判斷文件裡的檔案存不存在
             if FileManager.default.fileExists(atPath: documentPath, isDirectory: nil) {
+                
+                // 取的文件裡的內容
                 if let dataBuffer = FileManager.default.contents(atPath: documentPath) {
+                    
+                    // 顯示內容在Label
                     let dataString = String(data: dataBuffer, encoding: .utf8)
                     documentLabel.text = dataString
                 }
