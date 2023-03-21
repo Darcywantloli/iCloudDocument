@@ -9,13 +9,13 @@
 /* Begin PBXBuildFile section */
 		888EBC7129C43B9B007437A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888EBC7029C43B9B007437A4 /* AppDelegate.swift */; };
 		888EBC7329C43B9B007437A4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888EBC7229C43B9B007437A4 /* SceneDelegate.swift */; };
-		888EBC7529C43B9B007437A4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888EBC7429C43B9B007437A4 /* ViewController.swift */; };
-		888EBC7829C43B9B007437A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 888EBC7629C43B9B007437A4 /* Main.storyboard */; };
 		888EBC7A29C43B9D007437A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 888EBC7929C43B9D007437A4 /* Assets.xcassets */; };
 		888EBC7D29C43B9D007437A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 888EBC7B29C43B9D007437A4 /* LaunchScreen.storyboard */; };
 		888EBC8829C43B9D007437A4 /* iCloudDocumentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888EBC8729C43B9D007437A4 /* iCloudDocumentTests.swift */; };
 		888EBC9229C43B9D007437A4 /* iCloudDocumentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888EBC9129C43B9D007437A4 /* iCloudDocumentUITests.swift */; };
 		888EBC9429C43B9D007437A4 /* iCloudDocumentUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888EBC9329C43B9D007437A4 /* iCloudDocumentUITestsLaunchTests.swift */; };
+		888EBCA229C43D0F007437A4 /* iCloudDocumentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888EBCA029C43D0F007437A4 /* iCloudDocumentViewController.swift */; };
+		888EBCA329C43D0F007437A4 /* iCloudDocumentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 888EBCA129C43D0F007437A4 /* iCloudDocumentViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +39,6 @@
 		888EBC6D29C43B9B007437A4 /* iCloudDocument.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iCloudDocument.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		888EBC7029C43B9B007437A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		888EBC7229C43B9B007437A4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		888EBC7429C43B9B007437A4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		888EBC7729C43B9B007437A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		888EBC7929C43B9D007437A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		888EBC7C29C43B9D007437A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		888EBC7E29C43B9D007437A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +47,9 @@
 		888EBC8D29C43B9D007437A4 /* iCloudDocumentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iCloudDocumentUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		888EBC9129C43B9D007437A4 /* iCloudDocumentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iCloudDocumentUITests.swift; sourceTree = "<group>"; };
 		888EBC9329C43B9D007437A4 /* iCloudDocumentUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iCloudDocumentUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		888EBCA029C43D0F007437A4 /* iCloudDocumentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iCloudDocumentViewController.swift; sourceTree = "<group>"; };
+		888EBCA129C43D0F007437A4 /* iCloudDocumentViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = iCloudDocumentViewController.xib; sourceTree = "<group>"; };
+		888EBCA429C43D43007437A4 /* iCloudDocument.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iCloudDocument.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +100,13 @@
 		888EBC6F29C43B9B007437A4 /* iCloudDocument */ = {
 			isa = PBXGroup;
 			children = (
+				888EBCA429C43D43007437A4 /* iCloudDocument.entitlements */,
 				888EBC7029C43B9B007437A4 /* AppDelegate.swift */,
 				888EBC7229C43B9B007437A4 /* SceneDelegate.swift */,
-				888EBC7429C43B9B007437A4 /* ViewController.swift */,
-				888EBC7629C43B9B007437A4 /* Main.storyboard */,
 				888EBC7929C43B9D007437A4 /* Assets.xcassets */,
 				888EBC7B29C43B9D007437A4 /* LaunchScreen.storyboard */,
 				888EBC7E29C43B9D007437A4 /* Info.plist */,
+				888EBCAE29C9A3EC007437A4 /* Controller */,
 			);
 			path = iCloudDocument;
 			sourceTree = "<group>";
@@ -125,6 +126,15 @@
 				888EBC9329C43B9D007437A4 /* iCloudDocumentUITestsLaunchTests.swift */,
 			);
 			path = iCloudDocumentUITests;
+			sourceTree = "<group>";
+		};
+		888EBCAE29C9A3EC007437A4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				888EBCA029C43D0F007437A4 /* iCloudDocumentViewController.swift */,
+				888EBCA129C43D0F007437A4 /* iCloudDocumentViewController.xib */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,9 +241,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				888EBCA329C43D0F007437A4 /* iCloudDocumentViewController.xib in Resources */,
 				888EBC7D29C43B9D007437A4 /* LaunchScreen.storyboard in Resources */,
 				888EBC7A29C43B9D007437A4 /* Assets.xcassets in Resources */,
-				888EBC7829C43B9B007437A4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +268,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				888EBC7529C43B9B007437A4 /* ViewController.swift in Sources */,
 				888EBC7129C43B9B007437A4 /* AppDelegate.swift in Sources */,
 				888EBC7329C43B9B007437A4 /* SceneDelegate.swift in Sources */,
+				888EBCA229C43D0F007437A4 /* iCloudDocumentViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +307,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		888EBC7629C43B9B007437A4 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				888EBC7729C43B9B007437A4 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		888EBC7B29C43B9D007437A4 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -366,7 +368,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -420,7 +422,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -435,13 +437,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = iCloudDocument/iCloudDocument.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = S8FBP4YLUA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iCloudDocument/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -462,13 +465,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = iCloudDocument/iCloudDocument.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = S8FBP4YLUA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iCloudDocument/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
