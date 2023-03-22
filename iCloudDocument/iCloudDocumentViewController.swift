@@ -13,17 +13,33 @@ class iCloudDocumentViewController: UIViewController {
     @IBOutlet weak var documentLabel: UILabel!
     
     @IBOutlet weak var saveButton: UIButton!
+    @IBOutlet weak var uploadButton: UIButton!
     @IBOutlet weak var loadButton: UIButton!
+
+    private let fileManager = FileManager.default
+    private let filename = "test.txt"
     
-    // 取得iCloudContainer
-    let containerURL = FileManager.default.url(forUbiquityContainerIdentifier: nil)
-    
-    var documentURL: URL?
+    var iCloudDocumentURL: URL?
+    var localDocumentURL: URL?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if #available(iOS 16.0,  *) {
+            localDocumentURL = fileManager.urls(for: .documentDirectory,
+                                                in: .userDomainMask)[0].appending(path: filename)
+            iCloudDocumentURL = fileManager.url(forUbiquityContainerIdentifier: nil)?.appending(path: "Documents/\(filename)")
+        } else {
+            localDocumentURL = fileManager.urls(for: .documentDirectory,
+                                                in: .userDomainMask)[0].appendingPathComponent(filename)
+            iCloudDocumentURL = fileManager.url(forUbiquityContainerIdentifier: nil)?.appendingPathComponent("Documents/\(filename)")
+        }
+        
+        print(iCloudDocumentURL)
+        print(localDocumentURL)
+        
         setupUI()
-        setupiCloudDocument()
+//        setupiCloudDocument()
     }
     
     func setupUI() {
@@ -31,20 +47,32 @@ class iCloudDocumentViewController: UIViewController {
     }
     
     // 在iCloud產生文件
-    private func setupiCloudDocument() {
-        documentURL = containerURL?.appendingPathComponent("Documents/test.txt")
-    }
+//    private func setupiCloudDocument() {
+//        documentURL = containerURL?.appendingPathComponent("Documents/test.txt")
+//    }
     
     private func setupTextView() {
         documentTextView.delegate = self
         documentTextView.returnKeyType = .done
     }
+
+    @IBAction func saveToLocal(_ sender: Any) {
+        if let url = localDocumentURL {
+            do {
+                try documentTextView.text.write(to: url,
+                                                atomically: true,
+                                                encoding: .utf8)
+                print(url)
+            } catch {
+                print(error.localizedDescription)
+            }
+        }
+    }
     
     // 儲存內容上iCloud
-    @IBAction func saveDocument(_ sender: Any) {
-        if let url = documentURL {
+    @IBAction func uploadToDocument(_ sender: Any) {
+        if let url = iCloudDocumentURL {
             do {
-                
                 // 將TextView裡的內容寫入文件
                 try documentTextView.text.write(to: url,
                                                 atomically: true,
@@ -57,8 +85,8 @@ class iCloudDocumentViewController: UIViewController {
     }
     
     // 讀取iCloud裡的文件
-    @IBAction func loadDocument(_ sender: Any) {
-        if let documentPath = documentURL?.path {
+    @IBAction func loadFormDocument(_ sender: Any) {
+        if let documentPath = iCloudDocumentURL?.path {
             print(documentPath)
             
             // 判斷文件裡的檔案存不存在
@@ -71,6 +99,8 @@ class iCloudDocumentViewController: UIViewController {
                     let dataString = String(data: dataBuffer, encoding: .utf8)
                     documentLabel.text = dataString
                 }
+            } else {
+                print("no document")
             }
         }
     }

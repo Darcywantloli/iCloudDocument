@@ -106,6 +106,7 @@
 				888EBC7929C43B9D007437A4 /* Assets.xcassets */,
 				888EBC7B29C43B9D007437A4 /* LaunchScreen.storyboard */,
 				888EBC7E29C43B9D007437A4 /* Info.plist */,
+				888EBCB729CAE5C6007437A4 /* Model */,
 				888EBCAE29C9A3EC007437A4 /* Controller */,
 			);
 			path = iCloudDocument;
@@ -135,6 +136,13 @@
 				888EBCA129C43D0F007437A4 /* iCloudDocumentViewController.xib */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		888EBCB729CAE5C6007437A4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
