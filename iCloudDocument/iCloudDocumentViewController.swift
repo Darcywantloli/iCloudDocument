@@ -35,21 +35,12 @@ class iCloudDocumentViewController: UIViewController {
             iCloudDocumentURL = fileManager.url(forUbiquityContainerIdentifier: nil)?.appendingPathComponent("Documents/\(filename)")
         }
         
-        print(iCloudDocumentURL)
-        print(localDocumentURL)
-        
         setupUI()
-//        setupiCloudDocument()
     }
     
     func setupUI() {
         setupTextView()
     }
-    
-    // 在iCloud產生文件
-//    private func setupiCloudDocument() {
-//        documentURL = containerURL?.appendingPathComponent("Documents/test.txt")
-//    }
     
     private func setupTextView() {
         documentTextView.delegate = self
@@ -71,15 +62,14 @@ class iCloudDocumentViewController: UIViewController {
     
     // 儲存內容上iCloud
     @IBAction func uploadToDocument(_ sender: Any) {
-        if let url = iCloudDocumentURL {
-            do {
-                // 將TextView裡的內容寫入文件
-                try documentTextView.text.write(to: url,
-                                                atomically: true,
-                                                encoding: .utf8)
-                print(url)
-            } catch {
-                print(error.localizedDescription)
+        if let localDocumentPath = localDocumentURL?.path {
+            if let iCloudDocumentPath = iCloudDocumentURL?.path {
+                if fileManager.fileExists(atPath: iCloudDocumentPath, isDirectory: nil) {
+                    try! fileManager.removeItem(atPath: iCloudDocumentPath)
+                    try! fileManager.copyItem(atPath: localDocumentPath, toPath: iCloudDocumentPath)
+                } else {
+                    try! fileManager.copyItem(atPath: localDocumentPath, toPath: iCloudDocumentPath)
+                }
             }
         }
     }
@@ -90,10 +80,10 @@ class iCloudDocumentViewController: UIViewController {
             print(documentPath)
             
             // 判斷文件裡的檔案存不存在
-            if FileManager.default.fileExists(atPath: documentPath, isDirectory: nil) {
+            if fileManager.fileExists(atPath: documentPath, isDirectory: nil) {
                 
                 // 取的文件裡的內容
-                if let dataBuffer = FileManager.default.contents(atPath: documentPath) {
+                if let dataBuffer = fileManager.contents(atPath: documentPath) {
                     
                     // 顯示內容在Label
                     let dataString = String(data: dataBuffer, encoding: .utf8)
