@@ -12,6 +12,7 @@
             <connections>
                 <outlet property="documentLabel" destination="he1-N3-Mc3" id="O5e-Bv-Gus"/>
                 <outlet property="documentTextView" destination="KTE-0o-agg" id="nI7-gg-PS2"/>
+                <outlet property="downloadButton" destination="B8F-T8-FsF" id="flW-hx-AZ8"/>
                 <outlet property="loadButton" destination="ySa-KR-GD0" id="6zZ-6b-lNd"/>
                 <outlet property="saveButton" destination="HNF-Uj-7Yo" id="tYV-g3-XIP"/>
                 <outlet property="uploadButton" destination="dSx-6g-zEc" id="AiL-65-mD0"/>
@@ -24,7 +25,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dSx-6g-zEc">
-                    <rect key="frame" x="86.333333333333329" y="549.66666666666663" width="220.33333333333337" height="35"/>
+                    <rect key="frame" x="72.666666666666671" y="524.66666666666663" width="247.66666666666663" height="35"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" title="upload to Document"/>
                     <connections>
@@ -45,7 +46,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ySa-KR-GD0">
-                    <rect key="frame" x="86.333333333333329" y="634.66666666666663" width="220.33333333333337" height="35"/>
+                    <rect key="frame" x="72.666666666666671" y="644.66666666666663" width="247.66666666666663" height="35"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" title="Load from Document"/>
                     <connections>
@@ -53,11 +54,19 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HNF-Uj-7Yo">
-                    <rect key="frame" x="86.333333333333329" y="464.66666666666669" width="220.33333333333337" height="35"/>
+                    <rect key="frame" x="72.666666666666671" y="464.66666666666669" width="247.66666666666663" height="35"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" title="save"/>
                     <connections>
                         <action selector="saveToLocal:" destination="-1" eventType="touchUpInside" id="bTT-Ju-vC9"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B8F-T8-FsF">
+                    <rect key="frame" x="72.666666666666671" y="584.66666666666663" width="247.66666666666663" height="35"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="download from Document"/>
+                    <connections>
+                        <action selector="downloadFromDocument:" destination="-1" eventType="touchUpInside" id="ggX-jW-7Zb"/>
                     </connections>
                 </button>
             </subviews>
@@ -66,23 +75,27 @@
             <constraints>
                 <constraint firstItem="KTE-0o-agg" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="1KG-0O-XeN"/>
                 <constraint firstItem="he1-N3-Mc3" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="50" id="1kb-SD-a8l"/>
+                <constraint firstItem="ySa-KR-GD0" firstAttribute="top" secondItem="B8F-T8-FsF" secondAttribute="bottom" constant="25" id="1lz-sD-Unk"/>
                 <constraint firstItem="he1-N3-Mc3" firstAttribute="height" secondItem="KTE-0o-agg" secondAttribute="height" id="1mU-4S-4il"/>
-                <constraint firstItem="dSx-6g-zEc" firstAttribute="top" secondItem="HNF-Uj-7Yo" secondAttribute="bottom" constant="50" id="1xp-lH-4H1"/>
+                <constraint firstItem="dSx-6g-zEc" firstAttribute="top" secondItem="HNF-Uj-7Yo" secondAttribute="bottom" constant="25" id="1xp-lH-4H1"/>
                 <constraint firstItem="HNF-Uj-7Yo" firstAttribute="centerX" secondItem="KTE-0o-agg" secondAttribute="centerX" id="2bo-rV-TQW"/>
                 <constraint firstItem="KTE-0o-agg" firstAttribute="top" secondItem="he1-N3-Mc3" secondAttribute="bottom" constant="50" id="324-GA-grf"/>
                 <constraint firstItem="ySa-KR-GD0" firstAttribute="centerX" secondItem="dSx-6g-zEc" secondAttribute="centerX" id="4kF-YK-OZt"/>
                 <constraint firstItem="HNF-Uj-7Yo" firstAttribute="width" secondItem="dSx-6g-zEc" secondAttribute="width" id="66Z-wM-Mnn"/>
+                <constraint firstItem="B8F-T8-FsF" firstAttribute="centerX" secondItem="dSx-6g-zEc" secondAttribute="centerX" id="Daq-aR-9bB"/>
                 <constraint firstItem="HNF-Uj-7Yo" firstAttribute="top" secondItem="KTE-0o-agg" secondAttribute="bottom" constant="50" id="ELG-XC-3zN"/>
+                <constraint firstItem="B8F-T8-FsF" firstAttribute="width" secondItem="dSx-6g-zEc" secondAttribute="width" id="Etc-0q-PFS"/>
                 <constraint firstItem="HNF-Uj-7Yo" firstAttribute="height" secondItem="dSx-6g-zEc" secondAttribute="height" id="F2g-6v-TOt"/>
                 <constraint firstItem="he1-N3-Mc3" firstAttribute="width" secondItem="KTE-0o-agg" secondAttribute="width" id="Gkn-6Q-1sC"/>
-                <constraint firstItem="ySa-KR-GD0" firstAttribute="top" secondItem="dSx-6g-zEc" secondAttribute="bottom" constant="50" id="Ow2-mC-86B"/>
                 <constraint firstItem="he1-N3-Mc3" firstAttribute="centerX" secondItem="KTE-0o-agg" secondAttribute="centerX" id="TyY-ac-XgJ"/>
                 <constraint firstItem="KTE-0o-agg" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.15" id="UXU-HX-2rv"/>
                 <constraint firstItem="ySa-KR-GD0" firstAttribute="height" secondItem="dSx-6g-zEc" secondAttribute="height" id="cIC-W6-9WV"/>
                 <constraint firstItem="dSx-6g-zEc" firstAttribute="centerX" secondItem="KTE-0o-agg" secondAttribute="centerX" id="cOu-ux-CW5"/>
                 <constraint firstItem="KTE-0o-agg" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.7" id="fVC-iE-2LN"/>
+                <constraint firstItem="B8F-T8-FsF" firstAttribute="height" secondItem="dSx-6g-zEc" secondAttribute="height" id="gQy-hL-xxo"/>
                 <constraint firstItem="ySa-KR-GD0" firstAttribute="width" secondItem="dSx-6g-zEc" secondAttribute="width" id="kj5-nx-ppb"/>
-                <constraint firstItem="dSx-6g-zEc" firstAttribute="width" secondItem="KTE-0o-agg" secondAttribute="width" multiplier="0.8" id="wnF-m1-Ip3"/>
+                <constraint firstItem="dSx-6g-zEc" firstAttribute="width" secondItem="KTE-0o-agg" secondAttribute="width" multiplier="0.9" id="wnF-m1-Ip3"/>
+                <constraint firstItem="B8F-T8-FsF" firstAttribute="top" secondItem="dSx-6g-zEc" secondAttribute="bottom" constant="25" id="zFY-lt-V7d"/>
             </constraints>
             <point key="canvasLocation" x="36" y="20"/>
         </view>

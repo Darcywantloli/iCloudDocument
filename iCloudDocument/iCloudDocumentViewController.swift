@@ -14,6 +14,7 @@ class iCloudDocumentViewController: UIViewController {
     
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var uploadButton: UIButton!
+    @IBOutlet weak var downloadButton: UIButton!
     @IBOutlet weak var loadButton: UIButton!
 
     private let fileManager = FileManager.default
@@ -69,6 +70,19 @@ class iCloudDocumentViewController: UIViewController {
                     try! fileManager.copyItem(atPath: localDocumentPath, toPath: iCloudDocumentPath)
                 } else {
                     try! fileManager.copyItem(atPath: localDocumentPath, toPath: iCloudDocumentPath)
+                }
+            }
+        }
+    }
+    
+    @IBAction func downloadFromDocument(_ sender: Any) {
+        if let iCloudDocumentPath = iCloudDocumentURL?.path {
+            if let localDocumentPath = localDocumentURL?.path {
+                if fileManager.fileExists(atPath: localDocumentPath, isDirectory: nil) {
+                    try! fileManager.removeItem(atPath: localDocumentPath)
+                    try! fileManager.copyItem(atPath: iCloudDocumentPath, toPath: localDocumentPath)
+                } else {
+                    try! fileManager.copyItem(atPath: iCloudDocumentPath, toPath: localDocumentPath)
                 }
             }
         }
