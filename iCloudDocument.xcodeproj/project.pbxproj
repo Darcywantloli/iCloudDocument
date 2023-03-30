@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8887362129D1659B009C16D8 /* FireBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8887361F29D1659B009C16D8 /* FireBaseViewController.swift */; };
+		8887362229D1659B009C16D8 /* FireBaseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8887362029D1659B009C16D8 /* FireBaseViewController.xib */; };
+		8887362429D19000009C16D8 /* MessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8887362329D19000009C16D8 /* MessageModel.swift */; };
+		8887362629D19114009C16D8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8887362529D19113009C16D8 /* GoogleService-Info.plist */; };
+		8887362929D2BED2009C16D8 /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8887362729D2BED2009C16D8 /* MessageTableViewCell.swift */; };
+		8887362A29D2BED2009C16D8 /* MessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8887362829D2BED2009C16D8 /* MessageTableViewCell.xib */; };
+		8887362D29D2D43A009C16D8 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8887362C29D2D43A009C16D8 /* Alert.swift */; };
+		8887362F29D428FE009C16D8 /* CryptoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8887362E29D428FE009C16D8 /* CryptoManager.swift */; };
+		8887363129D5599D009C16D8 /* Encodable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8887363029D5599D009C16D8 /* Encodable+Extension.swift */; };
+		8887363729D574E4009C16D8 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8887363629D574E4009C16D8 /* String+Extension.swift */; };
 		888EBC7129C43B9B007437A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888EBC7029C43B9B007437A4 /* AppDelegate.swift */; };
 		888EBC7329C43B9B007437A4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888EBC7229C43B9B007437A4 /* SceneDelegate.swift */; };
 		888EBC7A29C43B9D007437A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 888EBC7929C43B9D007437A4 /* Assets.xcassets */; };
@@ -16,6 +26,9 @@
 		888EBC9429C43B9D007437A4 /* iCloudDocumentUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888EBC9329C43B9D007437A4 /* iCloudDocumentUITestsLaunchTests.swift */; };
 		888EBCA229C43D0F007437A4 /* iCloudDocumentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888EBCA029C43D0F007437A4 /* iCloudDocumentViewController.swift */; };
 		888EBCA329C43D0F007437A4 /* iCloudDocumentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 888EBCA129C43D0F007437A4 /* iCloudDocumentViewController.xib */; };
+		DC88E5F425839E90E93A4D81 /* Pods_iCloudDocument_iCloudDocumentUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30EC39012B5FFEB875F261B5 /* Pods_iCloudDocument_iCloudDocumentUITests.framework */; };
+		EA9B8C71C4BD0F375E5F5142 /* Pods_iCloudDocument.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C477BD685D03499AFE3801F /* Pods_iCloudDocument.framework */; };
+		F81796C5A6EE221B8B2D3436 /* Pods_iCloudDocumentTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F942AD7FE01E4837F85122F5 /* Pods_iCloudDocumentTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +49,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0745E8F60DE3244C4298ED4C /* Pods-iCloudDocument.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iCloudDocument.release.xcconfig"; path = "Target Support Files/Pods-iCloudDocument/Pods-iCloudDocument.release.xcconfig"; sourceTree = "<group>"; };
+		078E4F58DF68BC8FB94F5053 /* Pods-iCloudDocument-iCloudDocumentUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iCloudDocument-iCloudDocumentUITests.release.xcconfig"; path = "Target Support Files/Pods-iCloudDocument-iCloudDocumentUITests/Pods-iCloudDocument-iCloudDocumentUITests.release.xcconfig"; sourceTree = "<group>"; };
+		2C72E237AA80DED2E238A939 /* Pods-iCloudDocument.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iCloudDocument.debug.xcconfig"; path = "Target Support Files/Pods-iCloudDocument/Pods-iCloudDocument.debug.xcconfig"; sourceTree = "<group>"; };
+		30EC39012B5FFEB875F261B5 /* Pods_iCloudDocument_iCloudDocumentUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iCloudDocument_iCloudDocumentUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B18A5BD7D7A5A9C2D64DE78 /* Pods-iCloudDocumentTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iCloudDocumentTests.release.xcconfig"; path = "Target Support Files/Pods-iCloudDocumentTests/Pods-iCloudDocumentTests.release.xcconfig"; sourceTree = "<group>"; };
+		7C477BD685D03499AFE3801F /* Pods_iCloudDocument.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iCloudDocument.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E5972EAE6FB5C207C552EFA /* Pods-iCloudDocument-iCloudDocumentUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iCloudDocument-iCloudDocumentUITests.debug.xcconfig"; path = "Target Support Files/Pods-iCloudDocument-iCloudDocumentUITests/Pods-iCloudDocument-iCloudDocumentUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		8887361F29D1659B009C16D8 /* FireBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBaseViewController.swift; sourceTree = "<group>"; };
+		8887362029D1659B009C16D8 /* FireBaseViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FireBaseViewController.xib; sourceTree = "<group>"; };
+		8887362329D19000009C16D8 /* MessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageModel.swift; sourceTree = "<group>"; };
+		8887362529D19113009C16D8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8887362729D2BED2009C16D8 /* MessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
+		8887362829D2BED2009C16D8 /* MessageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageTableViewCell.xib; sourceTree = "<group>"; };
+		8887362C29D2D43A009C16D8 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		8887362E29D428FE009C16D8 /* CryptoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoManager.swift; sourceTree = "<group>"; };
+		8887363029D5599D009C16D8 /* Encodable+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+Extension.swift"; sourceTree = "<group>"; };
+		8887363629D574E4009C16D8 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		888EBC6D29C43B9B007437A4 /* iCloudDocument.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iCloudDocument.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		888EBC7029C43B9B007437A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		888EBC7229C43B9B007437A4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -50,6 +80,8 @@
 		888EBCA029C43D0F007437A4 /* iCloudDocumentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iCloudDocumentViewController.swift; sourceTree = "<group>"; };
 		888EBCA129C43D0F007437A4 /* iCloudDocumentViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = iCloudDocumentViewController.xib; sourceTree = "<group>"; };
 		888EBCA429C43D43007437A4 /* iCloudDocument.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iCloudDocument.entitlements; sourceTree = "<group>"; };
+		9CF3A0BC5DDB3EBEAE8CC292 /* Pods-iCloudDocumentTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iCloudDocumentTests.debug.xcconfig"; path = "Target Support Files/Pods-iCloudDocumentTests/Pods-iCloudDocumentTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F942AD7FE01E4837F85122F5 /* Pods_iCloudDocumentTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iCloudDocumentTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA9B8C71C4BD0F375E5F5142 /* Pods_iCloudDocument.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F81796C5A6EE221B8B2D3436 /* Pods_iCloudDocumentTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,12 +105,41 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC88E5F425839E90E93A4D81 /* Pods_iCloudDocument_iCloudDocumentUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8887361D29D1656B009C16D8 /* iCloudDocument */ = {
+			isa = PBXGroup;
+			children = (
+				888EBCA029C43D0F007437A4 /* iCloudDocumentViewController.swift */,
+				888EBCA129C43D0F007437A4 /* iCloudDocumentViewController.xib */,
+			);
+			name = iCloudDocument;
+			sourceTree = "<group>";
+		};
+		8887361E29D16581009C16D8 /* FireBase */ = {
+			isa = PBXGroup;
+			children = (
+				8887361F29D1659B009C16D8 /* FireBaseViewController.swift */,
+				8887362029D1659B009C16D8 /* FireBaseViewController.xib */,
+				8887362729D2BED2009C16D8 /* MessageTableViewCell.swift */,
+				8887362829D2BED2009C16D8 /* MessageTableViewCell.xib */,
+			);
+			name = FireBase;
+			sourceTree = "<group>";
+		};
+		8887362B29D2D424009C16D8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8887362C29D2D43A009C16D8 /* Alert.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		888EBC6429C43B9B007437A4 = {
 			isa = PBXGroup;
 			children = (
@@ -84,6 +147,8 @@
 				888EBC8629C43B9D007437A4 /* iCloudDocumentTests */,
 				888EBC9029C43B9D007437A4 /* iCloudDocumentUITests */,
 				888EBC6E29C43B9B007437A4 /* Products */,
+				E1840895FD74EA4C8C9DC917 /* Pods */,
+				ED376B012B0E34BB068EC689 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,7 +171,9 @@
 				888EBC7929C43B9D007437A4 /* Assets.xcassets */,
 				888EBC7B29C43B9D007437A4 /* LaunchScreen.storyboard */,
 				888EBC7E29C43B9D007437A4 /* Info.plist */,
+				8887362529D19113009C16D8 /* GoogleService-Info.plist */,
 				888EBCB729CAE5C6007437A4 /* Model */,
+				8887362B29D2D424009C16D8 /* View */,
 				888EBCAE29C9A3EC007437A4 /* Controller */,
 			);
 			path = iCloudDocument;
@@ -132,8 +199,8 @@
 		888EBCAE29C9A3EC007437A4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				888EBCA029C43D0F007437A4 /* iCloudDocumentViewController.swift */,
-				888EBCA129C43D0F007437A4 /* iCloudDocumentViewController.xib */,
+				8887361E29D16581009C16D8 /* FireBase */,
+				8887361D29D1656B009C16D8 /* iCloudDocument */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -141,8 +208,35 @@
 		888EBCB729CAE5C6007437A4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8887362329D19000009C16D8 /* MessageModel.swift */,
+				8887362E29D428FE009C16D8 /* CryptoManager.swift */,
+				8887363029D5599D009C16D8 /* Encodable+Extension.swift */,
+				8887363629D574E4009C16D8 /* String+Extension.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		E1840895FD74EA4C8C9DC917 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2C72E237AA80DED2E238A939 /* Pods-iCloudDocument.debug.xcconfig */,
+				0745E8F60DE3244C4298ED4C /* Pods-iCloudDocument.release.xcconfig */,
+				7E5972EAE6FB5C207C552EFA /* Pods-iCloudDocument-iCloudDocumentUITests.debug.xcconfig */,
+				078E4F58DF68BC8FB94F5053 /* Pods-iCloudDocument-iCloudDocumentUITests.release.xcconfig */,
+				9CF3A0BC5DDB3EBEAE8CC292 /* Pods-iCloudDocumentTests.debug.xcconfig */,
+				5B18A5BD7D7A5A9C2D64DE78 /* Pods-iCloudDocumentTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		ED376B012B0E34BB068EC689 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7C477BD685D03499AFE3801F /* Pods_iCloudDocument.framework */,
+				30EC39012B5FFEB875F261B5 /* Pods_iCloudDocument_iCloudDocumentUITests.framework */,
+				F942AD7FE01E4837F85122F5 /* Pods_iCloudDocumentTests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,9 +246,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 888EBC9729C43B9D007437A4 /* Build configuration list for PBXNativeTarget "iCloudDocument" */;
 			buildPhases = (
+				9299ED0E5D9D65BE3D1AE31D /* [CP] Check Pods Manifest.lock */,
 				888EBC6929C43B9B007437A4 /* Sources */,
 				888EBC6A29C43B9B007437A4 /* Frameworks */,
 				888EBC6B29C43B9B007437A4 /* Resources */,
+				3583B2F05E7E0B871E735E04 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -169,6 +265,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 888EBC9A29C43B9D007437A4 /* Build configuration list for PBXNativeTarget "iCloudDocumentTests" */;
 			buildPhases = (
+				210868ADBE1B02AE1ED15342 /* [CP] Check Pods Manifest.lock */,
 				888EBC7F29C43B9D007437A4 /* Sources */,
 				888EBC8029C43B9D007437A4 /* Frameworks */,
 				888EBC8129C43B9D007437A4 /* Resources */,
@@ -187,9 +284,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 888EBC9D29C43B9D007437A4 /* Build configuration list for PBXNativeTarget "iCloudDocumentUITests" */;
 			buildPhases = (
+				B24EEB656F7374891090B515 /* [CP] Check Pods Manifest.lock */,
 				888EBC8929C43B9D007437A4 /* Sources */,
 				888EBC8A29C43B9D007437A4 /* Frameworks */,
 				888EBC8B29C43B9D007437A4 /* Resources */,
+				615E6F1A18B7BF7099CE4CB7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -250,8 +349,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				888EBCA329C43D0F007437A4 /* iCloudDocumentViewController.xib in Resources */,
+				8887362A29D2BED2009C16D8 /* MessageTableViewCell.xib in Resources */,
 				888EBC7D29C43B9D007437A4 /* LaunchScreen.storyboard in Resources */,
+				8887362629D19114009C16D8 /* GoogleService-Info.plist in Resources */,
 				888EBC7A29C43B9D007437A4 /* Assets.xcassets in Resources */,
+				8887362229D1659B009C16D8 /* FireBaseViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,14 +373,124 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		210868ADBE1B02AE1ED15342 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iCloudDocumentTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3583B2F05E7E0B871E735E04 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iCloudDocument/Pods-iCloudDocument-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iCloudDocument/Pods-iCloudDocument-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iCloudDocument/Pods-iCloudDocument-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		615E6F1A18B7BF7099CE4CB7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iCloudDocument-iCloudDocumentUITests/Pods-iCloudDocument-iCloudDocumentUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iCloudDocument-iCloudDocumentUITests/Pods-iCloudDocument-iCloudDocumentUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iCloudDocument-iCloudDocumentUITests/Pods-iCloudDocument-iCloudDocumentUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9299ED0E5D9D65BE3D1AE31D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iCloudDocument-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B24EEB656F7374891090B515 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iCloudDocument-iCloudDocumentUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		888EBC6929C43B9B007437A4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8887362429D19000009C16D8 /* MessageModel.swift in Sources */,
 				888EBC7129C43B9B007437A4 /* AppDelegate.swift in Sources */,
+				8887363129D5599D009C16D8 /* Encodable+Extension.swift in Sources */,
+				8887362F29D428FE009C16D8 /* CryptoManager.swift in Sources */,
 				888EBC7329C43B9B007437A4 /* SceneDelegate.swift in Sources */,
 				888EBCA229C43D0F007437A4 /* iCloudDocumentViewController.swift in Sources */,
+				8887362129D1659B009C16D8 /* FireBaseViewController.swift in Sources */,
+				8887362929D2BED2009C16D8 /* MessageTableViewCell.swift in Sources */,
+				8887363729D574E4009C16D8 /* String+Extension.swift in Sources */,
+				8887362D29D2D43A009C16D8 /* Alert.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,6 +654,7 @@
 		};
 		888EBC9829C43B9D007437A4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C72E237AA80DED2E238A939 /* Pods-iCloudDocument.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -470,6 +683,7 @@
 		};
 		888EBC9929C43B9D007437A4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0745E8F60DE3244C4298ED4C /* Pods-iCloudDocument.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -498,6 +712,7 @@
 		};
 		888EBC9B29C43B9D007437A4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9CF3A0BC5DDB3EBEAE8CC292 /* Pods-iCloudDocumentTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -517,6 +732,7 @@
 		};
 		888EBC9C29C43B9D007437A4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B18A5BD7D7A5A9C2D64DE78 /* Pods-iCloudDocumentTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -536,6 +752,7 @@
 		};
 		888EBC9E29C43B9D007437A4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E5972EAE6FB5C207C552EFA /* Pods-iCloudDocument-iCloudDocumentUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -553,6 +770,7 @@
 		};
 		888EBC9F29C43B9D007437A4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 078E4F58DF68BC8FB94F5053 /* Pods-iCloudDocument-iCloudDocumentUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
