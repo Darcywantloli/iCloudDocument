@@ -7,6 +7,7 @@
 
 import Foundation
 
+// 資料型態
 struct MessageModel: Encodable {
     var id: String
     var name: String

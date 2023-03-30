@@ -29,6 +29,7 @@ class FireBaseViewController: UIViewController {
         
         setUI()
         
+        // 設定Firebase參考路徑
         databaseRef = Database.database().reference().child("messages")
         self.fetchMessageFromFirebase()
     }
@@ -40,22 +41,6 @@ class FireBaseViewController: UIViewController {
         
         overrideUserInterfaceStyle = .light
     }
-    
-    //    private func tryAES(message: MessageModel) {
-    //        let cryptoManager = CryptoManager()
-    //
-    //        let messageData = cryptoManager.classToStringData(message: message)
-    //        print(messageData! as NSData)
-    //        let encryptData = cryptoManager.aesEncypt(messageData: messageData!)
-    //        print(encryptData! as NSData)
-    //        let encryptString = encryptData?.toHexString().uppercased()
-    //
-    //        let firebaseData = encryptString?.hexdecimal
-    //        print(firebaseData! as NSData)
-    //        let decryptData = cryptoManager.aesDecrypt(encryptData: firebaseData!)
-    //        print(decryptData! as NSData)
-    //        let decryptMessage = cryptoManager.jsonDataToModel(jsonData: decryptData!)
-    //    }
     
     private func setTextView() {
         messageTextView.delegate = self
@@ -93,23 +78,31 @@ class FireBaseViewController: UIViewController {
         databaseRef.removeAllObservers()
     }
     
+    // 將資料上傳到Firebase
     func sendMessageToFirebase() {
         let cryptoManager = CryptoManager()
+        
+        // 隨機產生一把key
         let key = databaseRef.childByAutoId().key
         
+        // 阻擋空白輸入
         if personTextField.text == "" || messageTextView.text == "" {
             Alert.showAlertWith(title: "輸入不能為空",
                                 message: "",
                                 vc: self,
                                 confirmTitle: "確認")
         } else {
+            
+            // 將輸入的資料做加密
             let message = MessageModel(id: key!,
                                        name: personTextField.text!,
                                        content: messageTextView.text!)
+            
             let messageData = cryptoManager.classToStringData(message: message)
             let encryptData = cryptoManager.aesEncypt(messageData: messageData!)
             let encryptString = encryptData?.toHexString().uppercased()
             
+            // 將加密後的資料以及時間戳上傳
             let data: [String: Any] = ["data": encryptString!,
                                        "timestamp": ServerValue.timestamp()]
             
@@ -125,11 +118,17 @@ class FireBaseViewController: UIViewController {
         }
     }
     
+    // 取得Firebase裡的資料
     func fetchMessageFromFirebase() {
         let cryptoManager = CryptoManager()
+        
         self.databaseRef.observe(.value) { snapshot in
             if(snapshot.childrenCount > 0) {
+                
+                // 取得前先清空本地資料
                 self.messageList.removeAll()
+                
+                // 對每一筆資料解密後存回本地
                 for firebaseMessages in snapshot.children.allObjects as! [DataSnapshot] {
                     let firebaseObject = firebaseMessages.value as? [String: Any]
                     let encryptString = firebaseObject?["data"] as! String
@@ -148,14 +147,6 @@ class FireBaseViewController: UIViewController {
                     } catch {
                         print(error.localizedDescription)
                     }
-//                    let messageName = messageObject?["name"]
-//                    let messageContent = messageObject?["content"]
-//
-//                    let message = MessageModel(id: messageID as! String,
-//                                               name: messageName as! String,
-//                                               content: messageContent as! String)
-//
-//                    self.messageList.append(message)
                 }
                 self.listTableView.reloadData()
             } else {
@@ -164,17 +155,6 @@ class FireBaseViewController: UIViewController {
             }
         }
     }
-    
-//    func getSystemTime() -> String {
-//        let currentDate = Date()
-//        let dateFormatter: DateFormatter = DateFormatter()
-//
-//        dateFormatter.dateFormat = "YYYY-MM-dd HH:mm:ss"
-//        dateFormatter.locale = Locale.ReferenceType.system
-//        dateFormatter.timeZone = TimeZone.ReferenceType.system
-//
-//        return dateFormatter.string(from: currentDate)
-//    }
     
     @IBAction func sendMessage(_ sender: Any) {
         self.sendMessageToFirebase()
@@ -204,6 +184,7 @@ extension FireBaseViewController: UITableViewDelegate, UITableViewDataSource {
         tableView.deselectRow(at: indexPath, animated: false)
     }
     
+    // 左滑刪除
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let delete = UIContextualAction(style: .destructive, title: "刪除") { action, view, complete in
             self.databaseRef.child(self.messageList[indexPath.row].id).setValue(nil)

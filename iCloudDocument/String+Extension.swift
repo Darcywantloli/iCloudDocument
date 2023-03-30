@@ -8,6 +8,8 @@
 import Foundation
 
 extension String {
+    
+    // 16進制字串轉Data
     var hexdecimal: Data? {
         var data = Data(capacity: count / 2)
         

@@ -8,6 +8,8 @@
 import UIKit
 
 class Alert {
+    
+    // 推播
     static func showAlertWith(title: String,
                               message: String,
                               vc: UIViewController,
