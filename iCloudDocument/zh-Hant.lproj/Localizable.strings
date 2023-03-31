@@ -1,0 +1,21 @@
+/* 
+  Localizable.strings
+  iCloudDocument
+
+  Created by imac on 2023/3/31.
+  
+*/
+
+// Firebase
+"message person" = "留言人";
+"message content" = "留言內容";
+"send" = "送出";
+"input can not be empty" = "輸入不能為空";
+"confirm" = "確認";
+"delete" = "刪除";
+
+// iCloudDocument
+"save to local" = "儲存至本地";
+"upload to document" = "本地上傳iCloud文件";
+"download from document" = "iCloud文件下載至本地";
+"load from document" = "讀取iCloud文件";

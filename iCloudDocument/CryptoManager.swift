@@ -11,7 +11,7 @@ import CryptoSwift
 class CryptoManager {
     
     // 加密用的key和iv
-    let key = "DarcyDarcyDarcyD"
+    let key = "DarcyDarcyDarcyDarcyDarcyDarcyDa"
     let iv = "1234567890123456"
     
     // 資料轉換: MessageModel -> JSON -> String -> Data

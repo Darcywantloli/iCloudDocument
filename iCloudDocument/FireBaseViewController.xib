@@ -26,14 +26,14 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="留言人" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ch4-Tm-X7I">
-                    <rect key="frame" x="0.0" y="59" width="98.333333333333329" height="34"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                    <rect key="frame" x="0.0" y="59" width="157.33333333333334" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="留言內容" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="21d-z2-GTA">
-                    <rect key="frame" x="0.0" y="93" width="122.66666666666667" height="34"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                    <rect key="frame" x="0.0" y="93" width="196.66666666666666" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -45,7 +45,7 @@
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bov-5V-ELd">
-                    <rect key="frame" x="135" y="402.66666666666669" width="123" height="34.333333333333314"/>
+                    <rect key="frame" x="98.333333333333329" y="402.66666666666669" width="196.33333333333337" height="34.333333333333314"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" title="送出"/>
                     <connections>
@@ -53,7 +53,7 @@
                     </connections>
                 </button>
                 <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HkW-bq-EmZ">
-                    <rect key="frame" x="98.333333333333343" y="59" width="294.66666666666663" height="34"/>
+                    <rect key="frame" x="157.33333333333337" y="59" width="235.66666666666663" height="34"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
@@ -76,7 +76,7 @@
                 <constraint firstItem="Kzp-7x-Vic" firstAttribute="top" secondItem="21d-z2-GTA" secondAttribute="bottom" id="NzO-S3-y9t"/>
                 <constraint firstItem="ch4-Tm-X7I" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.04" id="P1V-d8-dME"/>
                 <constraint firstItem="HkW-bq-EmZ" firstAttribute="height" secondItem="ch4-Tm-X7I" secondAttribute="height" id="RQn-7r-eXd"/>
-                <constraint firstItem="ch4-Tm-X7I" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.25" id="WgW-vL-vTg"/>
+                <constraint firstItem="ch4-Tm-X7I" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.4" id="WgW-vL-vTg"/>
                 <constraint firstItem="xbY-1E-97n" firstAttribute="top" secondItem="Bov-5V-ELd" secondAttribute="bottom" constant="20" id="Y2R-Hc-t13"/>
                 <constraint firstItem="HkW-bq-EmZ" firstAttribute="centerY" secondItem="ch4-Tm-X7I" secondAttribute="centerY" id="aOA-xQ-zBP"/>
                 <constraint firstItem="Bov-5V-ELd" firstAttribute="height" secondItem="21d-z2-GTA" secondAttribute="height" id="bO8-If-CBS"/>

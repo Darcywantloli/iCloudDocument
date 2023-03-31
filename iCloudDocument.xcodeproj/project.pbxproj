@@ -17,6 +17,7 @@
 		8887362F29D428FE009C16D8 /* CryptoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8887362E29D428FE009C16D8 /* CryptoManager.swift */; };
 		8887363129D5599D009C16D8 /* Encodable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8887363029D5599D009C16D8 /* Encodable+Extension.swift */; };
 		8887363729D574E4009C16D8 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8887363629D574E4009C16D8 /* String+Extension.swift */; };
+		8887363C29D6C060009C16D8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8887363E29D6C060009C16D8 /* Localizable.strings */; };
 		888EBC7129C43B9B007437A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888EBC7029C43B9B007437A4 /* AppDelegate.swift */; };
 		888EBC7329C43B9B007437A4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888EBC7229C43B9B007437A4 /* SceneDelegate.swift */; };
 		888EBC7A29C43B9D007437A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 888EBC7929C43B9D007437A4 /* Assets.xcassets */; };
@@ -66,6 +67,9 @@
 		8887362E29D428FE009C16D8 /* CryptoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoManager.swift; sourceTree = "<group>"; };
 		8887363029D5599D009C16D8 /* Encodable+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+Extension.swift"; sourceTree = "<group>"; };
 		8887363629D574E4009C16D8 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		8887363829D6BFEC009C16D8 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		8887363D29D6C060009C16D8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		8887363F29D6C075009C16D8 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		888EBC6D29C43B9B007437A4 /* iCloudDocument.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iCloudDocument.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		888EBC7029C43B9B007437A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		888EBC7229C43B9B007437A4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -140,6 +144,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		8887363929D6C00D009C16D8 /* Localizable */ = {
+			isa = PBXGroup;
+			children = (
+				8887363E29D6C060009C16D8 /* Localizable.strings */,
+			);
+			name = Localizable;
+			sourceTree = "<group>";
+		};
 		888EBC6429C43B9B007437A4 = {
 			isa = PBXGroup;
 			children = (
@@ -175,6 +187,7 @@
 				888EBCB729CAE5C6007437A4 /* Model */,
 				8887362B29D2D424009C16D8 /* View */,
 				888EBCAE29C9A3EC007437A4 /* Controller */,
+				8887363929D6C00D009C16D8 /* Localizable */,
 			);
 			path = iCloudDocument;
 			sourceTree = "<group>";
@@ -330,6 +343,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hant",
 			);
 			mainGroup = 888EBC6429C43B9B007437A4;
 			productRefGroup = 888EBC6E29C43B9B007437A4 /* Products */;
@@ -351,6 +365,7 @@
 				888EBCA329C43D0F007437A4 /* iCloudDocumentViewController.xib in Resources */,
 				8887362A29D2BED2009C16D8 /* MessageTableViewCell.xib in Resources */,
 				888EBC7D29C43B9D007437A4 /* LaunchScreen.storyboard in Resources */,
+				8887363C29D6C060009C16D8 /* Localizable.strings in Resources */,
 				8887362629D19114009C16D8 /* GoogleService-Info.plist in Resources */,
 				888EBC7A29C43B9D007437A4 /* Assets.xcassets in Resources */,
 				8887362229D1659B009C16D8 /* FireBaseViewController.xib in Resources */,
@@ -527,10 +542,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		8887363E29D6C060009C16D8 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8887363D29D6C060009C16D8 /* en */,
+				8887363F29D6C075009C16D8 /* zh-Hant */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		888EBC7B29C43B9D007437A4 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				888EBC7C29C43B9D007437A4 /* Base */,
+				8887363829D6BFEC009C16D8 /* zh-Hant */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -542,6 +567,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -602,6 +628,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";

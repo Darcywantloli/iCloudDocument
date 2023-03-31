@@ -40,7 +40,15 @@ class iCloudDocumentViewController: UIViewController {
     }
     
     func setupUI() {
+        setButton()
         setupTextView()
+    }
+    
+    private func setButton() {
+        saveButton.setTitle(NSLocalizedString("save to local", comment: ""), for: .normal)
+        uploadButton.setTitle(NSLocalizedString("upload to document", comment: ""), for: .normal)
+        downloadButton.setTitle(NSLocalizedString("download from document", comment: ""), for: .normal)
+        loadButton.setTitle(NSLocalizedString("load from document", comment: ""), for: .normal)
     }
     
     private func setupTextView() {

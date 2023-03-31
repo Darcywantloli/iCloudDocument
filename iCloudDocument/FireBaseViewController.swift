@@ -29,17 +29,32 @@ class FireBaseViewController: UIViewController {
         
         setUI()
         
+        // 點空白處收鍵盤
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(closeKeyboard))
+        view.addGestureRecognizer(tapGestureRecognizer)
+        
         // 設定Firebase參考路徑
         databaseRef = Database.database().reference().child("messages")
         self.fetchMessageFromFirebase()
     }
     
     func setUI() {
+        setLabel()
+        setButton()
         setTextView()
         setTextField()
         setTableView()
         
         overrideUserInterfaceStyle = .light
+    }
+    
+    private func setLabel() {
+        personLabel.text = NSLocalizedString("message person", comment: "")
+        messageLabel.text = NSLocalizedString("message content", comment: "")
+    }
+    
+    private func setButton() {
+        sendButton.setTitle(NSLocalizedString("send", comment: ""), for: .normal)
     }
     
     private func setTextView() {
@@ -87,10 +102,10 @@ class FireBaseViewController: UIViewController {
         
         // 阻擋空白輸入
         if personTextField.text == "" || messageTextView.text == "" {
-            Alert.showAlertWith(title: "輸入不能為空",
+            Alert.showAlertWith(title: NSLocalizedString("input can not be empty", comment: ""),
                                 message: "",
                                 vc: self,
-                                confirmTitle: "確認")
+                                confirmTitle: NSLocalizedString("confirm", comment: ""))
         } else {
             
             // 將輸入的資料做加密
@@ -108,10 +123,10 @@ class FireBaseViewController: UIViewController {
             
             self.databaseRef.child("\(String(describing: key!))").setValue(data)
             
-            Alert.showAlertWith(title: "送出",
+            Alert.showAlertWith(title: NSLocalizedString("send", comment: ""),
                                 message: "",
                                 vc: self,
-                                confirmTitle: "確認")
+                                confirmTitle: NSLocalizedString("confirm", comment: ""))
             
             self.personTextField.text = ""
             self.messageTextView.text = ""
@@ -156,6 +171,10 @@ class FireBaseViewController: UIViewController {
         }
     }
     
+    @objc func closeKeyboard() {
+        view.endEditing(true)
+    }
+    
     @IBAction func sendMessage(_ sender: Any) {
         self.sendMessageToFirebase()
     }
@@ -186,7 +205,7 @@ extension FireBaseViewController: UITableViewDelegate, UITableViewDataSource {
     
     // 左滑刪除
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let delete = UIContextualAction(style: .destructive, title: "刪除") { action, view, complete in
+        let delete = UIContextualAction(style: .destructive, title: NSLocalizedString("delete", comment: "")) { action, view, complete in
             self.databaseRef.child(self.messageList[indexPath.row].id).setValue(nil)
             complete(true)
         }

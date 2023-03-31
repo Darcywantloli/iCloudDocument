@@ -1,0 +1,21 @@
+/* 
+  Localizable.strings
+  iCloudDocument
+
+  Created by imac on 2023/3/31.
+  
+*/
+
+// Firebase
+"message person" = "Message person";
+"message content" = "Message content";
+"send" = "Send";
+"input can not be empty" = "Input can not be empty";
+"confirm" = "Confirm";
+"delete" = "Delete";
+
+// iCloudDocument
+"save to local" = "Save to Local";
+"upload to document" = "Upload to Document";
+"download from document" = "Download from Document";
+"load from document" = "Load from Document";
